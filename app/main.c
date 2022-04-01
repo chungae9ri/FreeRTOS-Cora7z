@@ -8,6 +8,7 @@
 #define STACK_SIZE 1024
 #define TASK_PRIORITY (configMAX_PRIORITIES - 1)
 #define XUART_PS_MR_OfFSET		(4U)
+
 typedef struct uart_ps {
 	volatile uint32_t CR;
 	volatile uint32_t MR;
