@@ -45,7 +45,7 @@ OUTOBJS += $(patsubst $(TOPDIR)/%.S, $(TOPOUT)/%.o,$(OUTASMSRCS))
 .PHONY: buildapp $(SUBDIRS) clean
 
 buildapp: $(SUBDIRS)
-	$(LD) -T myfreertos.ld -o $(TOPOUT)/foo.elf $(OUTOBJS) -L$(LIB) -L$(LIB2) -lc -lgcc
+	$(LD) -T myfreertos.ld -o $(TOPOUT)/foo.elf $(OUTOBJS) -Map=$(TOPOUT)/foo.map -L$(LIB) -L$(LIB2) -lc -lgcc
 
 $(SUBDIRS):
 	mkdir -p $(TOPOUT)/$@
